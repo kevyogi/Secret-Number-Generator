@@ -1,10 +1,7 @@
 'use strict';
 module.exports = function() {
-  var mySecretNumber;
+  var mySecretNumber = Math.floor(Math.random()*1000000 + 1)
   return function (){
-    if(mySecretNumber === undefined){
-      mySecretNumber = Math.floor(Math.random()*1000000);
-    }
     return mySecretNumber;
   }
 };
